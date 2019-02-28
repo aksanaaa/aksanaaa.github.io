@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="/assets/jquery.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -133,25 +132,21 @@ PencilsImages = [
 ]  
 
  MarkersDivs = [
-  '<div class="item"><p>Expo Markers <span class="price">$7</span><br /><small>Different colored markers for a colorful lesson. </small></p></div>',
-  '<div class="item"><p>Sharpie Markers<span class="price">$5</span><br /><small>Fineline Markers for a perfect drawing. </small></p></div>',
-	'<div class="item"><p>Crayola Markers<span class="price">$8</span><br /><small>40 colored non-toxic markers that are great for any kid looking to create their own rainbow</small></p></div>',
+  '<div class="item">onclick=this.classList.toggle("show-description")<p>Expo Markers <span class="price">$7</span><br /><small>Different colored markers for a colorful lesson. </small></p></div>',
+  '<div class="item">onclick=this.classList.toggle("show-description")<p>Sharpie Markers<span class="price">$5</span><br /><small>Fineline Markers for a perfect drawing. </small></p></div>',
+  '<div class="item">onclick=this.classList.toggle("show-description")<p>Crayola Markers<span class="price">$8</span><br /><small>40 colored non-toxic markers that are great for any kid looking to create their own rainbow</small></p></div>',
   ]
 PensDivs = [
-  '<div class="item"><p>Sarasa Gel-ink Pens <span class="price">$5/span><br /><small>Your future go-to for smooth-writing.</small></p></div>',
-  '<div class="item"><p>Muji Pens<span class="price">$9</span><br /><small>Make your notes neat. Light-weight, but sufficient ink.</small></p></div>',
-	'<div class="item"><p>Pilot G2 Pens<span class="price">$3</span><br /><small>colored pens for colorful notes.</small></p></div>',
+  '<div class="item">onclick=this.classList.toggle("show-description")<p>Sarasa Gel-ink Pens <span class="price">$5/span><br /><small>Your future go-to for smooth-writing.</small></p></div>',
+  '<div class="item">onclick=this.classList.toggle("show-description")<p>Muji Pens<span class="price">$9</span><br /><small>Make your notes neat. Light-weight, but sufficient ink.</small></p></div>',
+  '<div class="item">onclick=this.classList.toggle("show-description")<p>Pilot G2 Pens<span class="price">$3</span><br /><small>colored pens for colorful notes.</small></p></div>',
   ]
 PencilsDivs = [
-  '<div class="item"><p>Impreial Pencils<span class="price">$3/span><br /><small>A whole pack of B pencils that is best for defined writing and drawing.</small></p></div>',
-  '<div class="item"><p>Mechanical Pencils<span class="price">$2</span><br /><small>2 pencils, with 2 eraser refills and a box of led refills.</small></p></div>',
-	'<div class="item"><p>2B PENCILS<span class="price">$3.49</span><br /><small>7 pencils, sharpener and eraser. Could last a semester of art school.</small></p></div>',
+  '<div class="item">onclick=this.classList.toggle("show-description")<p>Impreial Pencils<span class="price">$3/span><br /><small>A whole pack of B pencils that is best for defined writing and drawing.</small></p></div>',
+  '<div class="item">onclick=this.classList.toggle("show-description")onclick=this.classList.toggle("show-description")<p>Mechanical Pencils<span class="price">$2</span><br /><small>2 pencils, with 2 eraser refills and a box of led refills.</small></p></div>',
+  '<div class="item">onclick=this.classList.toggle("show-description")<p>2B PENCILS<span class="price">$3.49</span><br /><small>7 pencils, sharpener and eraser. Could last a semester of art school.</small></p></div>',
   ] 
-
-$('div').on('click', function() {
-  $(this).toggleClass('show-description');
-  });
-  
+ 
   function Markers() {
   brave = document.getElementById("excellent")
   brave.innerHTML=''
