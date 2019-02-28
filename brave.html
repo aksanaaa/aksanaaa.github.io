@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+<style>
+body {
+  margin: 0 auto;
+  max-width: 600px;
+  background: #f44262;
+}
+div {
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Covered By Your Grace', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #050505;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #224377;
+  margin: 0px 0 70px 0;
+}
+p {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #4f6282;
+  background: black;
+  background: linear-gradient(bottom, rgb(255, 255, 255), rgba (0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgb(255, 255, 255), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgb(255, 255, 255), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 20px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+  font-family: 'Thasadith', sans-serif;;
+  font-size: 20
+}
+
+ul {
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 23px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<ul>
+    <li><button onclick=Markers()>Markers</button></li>
+    <li><button onclick=Pens()>Pens</button></li>
+    <li><button onclick=Pencils()>Pencils</button></li>
+</ul>
+<h1>resha's stationery</h1>
+<h2>covering all your needs</h2>
+<div id="excellent"></div>
+
+<script>
+MarkersImages = [
+  'url("https://target.scene7.com/is/image/Target/GUEST_fe71e62c-edd1-4499-b541-76c7d8c982c0?wid=488&hei=488&fmt=pjpeg")',
+	'url("https://pics.drugstore.com/prodimg/412370/900.jpg")',
+	'url("https://images.kaplanco.com/catalog/largepopup/145820a.jpg")',
+]
+
+PensImages = [ 
+  'url("http://cdn.shopify.com/s/files/1/1403/8979/products/Zebra-Sarasa-Clip-Gel-Pen-10-Color-Set-12_grande.png?v=1496832659")',
+  'url("https://i.pinimg.com/originals/f0/32/e2/f032e29d745411765651656fb0ce6fa3.jpg")',
+  'url("https://images.samsclubresources.com/is/image/samsclub/0000728383158_A?$img_size_380x380$")',
+]  
+
+PencilsImages = [ 
+  'url("http://www.discountking.com/productimages/22352.jpg")',
+  'url("https://target.scene7.com/is/image/Target/GUEST_abd6f7f8-7fca-4c1b-a80a-ebfa3580ec62?wid=488&hei=488&fmt=pjpeg")',
+  'url("https://www.joshenstationery.com/wp-content/uploads/2018/06/natraj-hb-pencils-prices-30-per-packet-500x500.jpg")',
+]  
+
+ MarkersDivs = [
+  '<div class="item"><p>Expo Markers <span class="price">$7</span><br /><small>Different colored markers for a colorful lesson. </small></p></div>',
+  '<div class="item"><p>Sharpie Markers<span class="price">$5</span><br /><small>Fineline Markers for a perfect drawing. </small></p></div>',
+	'<div class="item"><p>Crayola Markers<span class="price">$8</span><br /><small>40 colored non-toxic markers that are great for any kid looking to create their own rainbow</small></p></div>',
+  ]
+PensDivs = [
+  '<div class="item"><p>Sarasa Gel-ink Pens <span class="price">$5/span><br /><small>Your future go-to for smooth-writing.</small></p></div>',
+  '<div class="item"><p>Muji Pens<span class="price">$9</span><br /><small>Make your notes neat. Light-weight, but sufficient ink.</small></p></div>',
+	'<div class="item"><p>Pilot G2 Pens<span class="price">$3</span><br /><small>colored pens for colorful notes.</small></p></div>',
+  ]
+PencilsDivs = [
+  '<div class="item"><p>Impreial Pencils<span class="price">$3/span><br /><small>A whole pack of B pencils that is best for defined writing and drawing.</small></p></div>',
+  '<div class="item"><p>Mechanical Pencils<span class="price">$2</span><br /><small>2 pencils, with 2 eraser refills and a box of led refills.</small></p></div>',
+	'<div class="item"><p>2B PENCILS<span class="price">$3.49</span><br /><small>7 pencils, sharpener and eraser. Could last a semester of art school.</small></p></div>',
+  ] 
+
+$('div').on('click', function() {
+  $(this).toggleClass('show-description');
+  });
+  
+  function Markers() {
+  brave = document.getElementById("excellent")
+  brave.innerHTML=''
+	brave.innerHTML += MarkersDivs[0]
+  brave.innerHTML += MarkersDivs[1]
+  brave.innerHTML += MarkersDivs[2]
+	/*alert("you made it")*/
+	items = document.getElementsByClassName("item")
+for (i=0; i<3; i=i+1) {
+		items[i].style.background = MarkersImages[i]
+} 
+items[0].style.backgroundSize = '100% 100%'
+items[1].style.backgroundSize = '100% 100%'
+items[2].style.backgroundSize = '100% 100%'
+  }
+  
+  function Pens() {
+  brave = document.getElementById("excellent")
+  brave.innerHTML=''
+	brave.innerHTML += PensDivs[0]
+  brave.innerHTML += PensDivs[1]
+  brave.innerHTML += PensDivs[2]
+	items = document.getElementsByClassName("item")
+for (i=0; i<3; i=i+1) {
+		items[i].style.background = PensImages[i]
+} 
+items[0].style.backgroundSize = '100% 100%'
+items[1].style.backgroundSize = '100% 100%'
+items[2].style.backgroundSize = '100% 100%'
+  }
+  
+  function Pencils() {
+  brave = document.getElementById("excellent")
+  brave.innerHTML=''
+	brave.innerHTML += PencilsDivs[0]
+  brave.innerHTML += PencilsDivs[1]
+  brave.innerHTML += PencilsDivs[2]
+	for (i=0; i<3; i=i+1) {
+		items[i].style.background = PencilsImages[i]
+} 
+items[0].style.backgroundSize = '100% 100%'
+items[1].style.backgroundSize = '100% 100%'
+items[2].style.backgroundSize = '100% 100%'
+  }
+  
+</script>
+
+</body>
