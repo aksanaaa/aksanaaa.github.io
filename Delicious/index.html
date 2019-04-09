@@ -55,6 +55,7 @@
           <h1 class="header-h">Satisfacer sus antojos! </h1>
           <p class="header-p">"Mexican food is so full of color, life and music. It's like a pinata exploding in your mouth." - Kate McLennan</p>
         </div>
+		<div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
           <div class="col-md-6 col-sm-6">
@@ -72,12 +73,40 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
-            <img src="https://www.eatthis.com/wp-content/uploads//media/images/ext/152439995/chips-salsa-guac.jpg" alt="" class="img-responsive">
+            <img src="https://www.eatthis.com/wp-content/uploads//media/images/ext/152439995/chips-salsa-guac.jpg" alt="" class="img-responsive" onclick=pressed(0)>
+			<div class="item"></div>
           </div>
         </div>
         <div class="col-md-1"></div>
+	</div>
+		<div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="col-md-6 col-sm-6">
+            <div class="about-info">
+              <h2 class="heading">We're hiring!</h2>
+              <p>Due to our business growing rapidly, we would like to open up new branches and eventually worldwide. We are looking for waiters, cashiers and a committed full-time manager. If you are interested, do send us your resume to elantojo@gmail.com. Open to all ages above 18. We warmly welcome you to our family. Trainings Provided. We are looking for people with</p>
+              <div class="details-list">
+                <ul>
+                  <li><i class="fa fa-check"></i>People Skills</li>
+                  <li><i class="fa fa-check"></i>Working Quickly</li>
+                  <li><i class="fa fa-check"></i>Multitasking</li>
+                  <li><i class="fa fa-check"></i>Good Memory</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <img src="http://casasolymar.com/wp-content/themes/guadalajara/images/rotator/img2.jpg" alt="" class="img-responsive" onclick=pressed(1)>
+			
+			<div class="item"></div>
+			
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+	</div>
       </div>
-    </div>
+  </div>
   </section>
   <!--/about-->
   <!-- menu -->
@@ -102,11 +131,12 @@
 
           <div class="breakfast menu-restaurant">
             <span class="clearfix">
-              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Huevos Rancheros</a>
+              <a class="menu-title" onclick=pressed(2) data-meal-img="assets/img/restaurant/rib.jpg">Huevos Rancheros</a>
               <span style="left: 166px; right: 44px;" class="menu"></span>
               <span class="menu-price">$5.99</span>
             </span>
             <span class="menu-subtitle">Two over easy eggs nestled on two lightly crispy corn tortillas toped in a delicate tomato sauce with sliced avocadoes served with a side of refried beans.</span>
+		<div class='item'></div>
           </div>
 
           <div class="breakfast menu-restaurant">
@@ -165,21 +195,13 @@
 
           <div class="lunch menu-restaurant">
             <span class="clearfix">
-              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Enchiladas</a>
+              <a class="menu-title" onclick=pressed(3) data-meal-img="assets/img/restaurant/rib.jpg">Enchiladas</a>
               <span style="left: 166px; right: 44px;" class="menu"></span>
               <span class="menu-price">$7.99</span>
+			  <div class='item'></div>
             </span>
             <span class="menu-subtitle">a corn tortilla rolled around a filling and is filled with meats, cheese, beans, potatoes, vegetables or combinations.</span>
           </div>
-          <div class="lunch menu-restaurant">
-            <span class="clearfix">
-              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Pinto Bean Salsa Salad</a>
-              <span style="left: 166px; right: 44px;" class="menu"></span>
-              <span class="menu-price">$4.89</span>
-            </span>
-            <span class="menu-subtitle">hearty meal with veggies and beans.</span>
-          </div>
-
           <div class="dinner menu-restaurant">
             <span class="clearfix">
               <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Mexican Chicken Chilli</a>
@@ -191,9 +213,10 @@
 
           <div class="dinner menu-restaurant">
             <span class="clearfix">
-              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Baked chicken chimichangas</a>
+              <a class="menu-title" onclick=pressed(4) data-meal-img="assets/img/restaurant/rib.jpg">Baked chicken chimichangas</a>
               <span style="left: 166px; right: 44px;" class="menu"></span>
               <span class="menu-price">$5.29</span>
+			  <div class='item'></div>
             </span>
             <span class="menu-subtitle">Brushing these with oil and baking them mimics the authentic crunch of a chimichanga</span>
           </div>
@@ -249,6 +272,23 @@
   <script src="js/custom.js"></script>
   <script src="contactform/contactform.js"></script>
 
+			<script>
+				captions = [
+					"Our restaurant is known for its colorful vibes which attracts the eye if every passer-by. However, we need more staffs to cover different areas to ensure a pleasing service to our customers.>",
+					"<img src='http://disneyways.files.wordpress.com/2014/02/2_antojitos-at-citywalk.jpg'style='width:50%'>",
+					"<img src='https://cookieandkate.com/images/2017/05/best-huevos-rancheros-recipe-2.jpg' style='width:50%'>",
+					"<img src='https://www.skinnytaste.com/wp-content/uploads/2011/08/Gina-Skinny-Chicken-Enchiladas-3-3.jpg' style='width:50%'>",
+					"Mexican appetizer or entre that includes a tortilla filled with a meat or bean mixture, typically deep fried to make it crispy on the outside. Chimichangas are basically deep-fried burritos. They're usually served topped with salsa, sour cream, or guacamole, and a side of Mexican rice.",
+				]
+				items = document.getElementsByClassName("item")
+				function pressed(x){
+					if ( items[x].innerHTML == "")
+					{items[x].innerHTML = captions[x]}
+					else { items[x].innerHTML = "" }
+					/*alert("Our restaurant is known for its colorful vibes which attracts the eye if every passer-by. However, we need more staffs to cover different areas to ensure a pleasing service to our customers.")*/
+				}
+				</script>
+					
 </body>
 
 </html>
