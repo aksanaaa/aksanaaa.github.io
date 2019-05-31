@@ -59,6 +59,7 @@ function draw() {
   background(0,128,128);
   fill(169,169,169)
   circle(x*s, y, 70*s)
+  if (touches.length == 0)   {
   if (keyIsDown(LEFT_ARROW)) {
     x = x - 10
   }
@@ -71,14 +72,10 @@ function draw() {
   if (keyIsDown(DOWN_ARROW)) {
     y = y + 10
   }
-  if (touches.length == 0)   {
-
-	controls for main character
-
 }
   else { 
-		150 = touches[0].x
-		120 = touches[0].y
+		x = touches[0].x
+		y = touches[0].y
 }
 
   fill(252, 160, 85)
