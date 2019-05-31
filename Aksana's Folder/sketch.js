@@ -50,7 +50,7 @@ function setup() {
   villain = 1
   level = 1
   baddie = 1
-  time = 1000
+  time = 500
 }
 
 function draw() { 
