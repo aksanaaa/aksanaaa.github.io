@@ -76,6 +76,11 @@ function draw() {
 	controls for main character
 
 }
+  else { 
+		150 = touches[0].x
+		120 = touches[0].y
+}
+
   fill(252, 160, 85)
   circle(f*s, g, 50*s)
   f = f + 5*direction
