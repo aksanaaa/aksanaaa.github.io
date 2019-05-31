@@ -71,6 +71,11 @@ function draw() {
   if (keyIsDown(DOWN_ARROW)) {
     y = y + 10
   }
+  if (touches.length == 0)   {
+
+	controls for main character
+
+}
   fill(252, 160, 85)
   circle(f*s, g, 50*s)
   f = f + 5*direction
