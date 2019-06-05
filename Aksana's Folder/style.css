@@ -9,3 +9,6 @@ html, body {
 canvas {
   display: block;
 }
+#dog, #dog input, button {
+	font-size: 120%;
+}
